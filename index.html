@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>StudyFlow - All Tasks</title>
+  <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <div class="logo-icon">📘</div>
+    <h1>StudyFlow</h1>
+  </div>
+  <nav>
+    <a href="index.html">All</a>
+    <a href="pending.html">Pending</a>
+    <a href="completed.html">Completed</a>
+  </nav>
+</header>
+
+<main>
+  <section class="card">
+    <h2>Add Subject</h2>
+    <input type="text" id="subjectInput" placeholder="Enter subject">
+    <button onclick="addSubject()">Add Subject</button>
+    <ul id="subjectList"></ul>
+  </section>
+
+  <section class="card">
+    <h2>Add Task</h2>
+    <input type="text" id="taskInput" placeholder="Enter task">
+
+    <label>Subject:</label>
+    <select id="taskSubject"></select>
+
+    <label>Due Date:</label>
+    <input type="date" id="dueDate">
+
+    <button onclick="addTask()">Add Task</button>
+
+    <div class="progress-container">
+      <div id="progressBar"></div>
+    </div>
+    <p id="taskCounter"></p>
+
+    <ul id="taskList"></ul>
+  </section>
+</main>
+
+<script>
+  let viewMode = "all";
+</script>
+<script src="script.js"></script>
+</body>
+</html>
